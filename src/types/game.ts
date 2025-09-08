@@ -18,4 +18,5 @@ export interface GameState {
   combo: number;
   powerUp: PowerUpType | null;
   powerUpTimeLeft: number;
+  timeLeft: number;
 }

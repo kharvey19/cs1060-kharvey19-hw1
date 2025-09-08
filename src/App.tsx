@@ -84,7 +84,7 @@ function App() {
       </div>
 
       {/* Game Over Screen */}
-      {gameState.gameStarted && !gameState.gameRunning && gameState.lives === 0 && (
+      {gameState.gameStarted && !gameState.gameRunning && (gameState.lives === 0 || gameState.timeLeft === 0) && (
         <GameOverScreen
           score={gameState.score}
           level={gameState.level}

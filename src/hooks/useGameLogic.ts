@@ -10,6 +10,7 @@ const INITIAL_STATE: GameState = {
   combo: 0,
   powerUp: null,
   powerUpTimeLeft: 0,
+  timeLeft: 30000, // 30 seconds in milliseconds
 };
 
 const HOLES_COUNT = 9;
@@ -19,6 +20,7 @@ export const useGameLogic = () => {
   const [moles, setMoles] = useState<Mole[]>([]);
   const gameLoopRef = useRef<NodeJS.Timeout>();
   const powerUpTimerRef = useRef<NodeJS.Timeout>();
+  const gameTimerRef = useRef<NodeJS.Timeout>();
 
   const initializeMoles = useCallback(() => {
     const initialMoles: Mole[] = Array.from({ length: HOLES_COUNT }, (_, i) => ({
@@ -189,6 +191,29 @@ export const useGameLogic = () => {
       }
     };
   }, [gameState.powerUp, gameState.powerUpTimeLeft]);
+
+  // Game countdown timer
+  useEffect(() => {
+    if (gameState.gameRunning && gameState.timeLeft > 0) {
+      const timer = setTimeout(() => {
+        setGameState(prev => {
+          const newTimeLeft = Math.max(0, prev.timeLeft - 100);
+          if (newTimeLeft === 0) {
+            return { ...prev, timeLeft: 0, gameRunning: false };
+          }
+          return { ...prev, timeLeft: newTimeLeft };
+        });
+      }, 100);
+
+      gameTimerRef.current = timer;
+    }
+
+    return () => {
+      if (gameTimerRef.current) {
+        clearTimeout(gameTimerRef.current);
+      }
+    };
+  }, [gameState.gameRunning, gameState.timeLeft]);
 
   return {
     gameState,

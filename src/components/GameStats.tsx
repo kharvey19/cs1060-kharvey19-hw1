@@ -35,7 +35,7 @@ const GameStats: React.FC<GameStatsProps> = ({ gameState }) => {
 
   return (
     <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-green-200">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {/* Score */}
         <div className="text-center">
           <div className="text-3xl font-bold text-green-600">
@@ -78,6 +78,17 @@ const GameStats: React.FC<GameStatsProps> = ({ gameState }) => {
             </span>
           </div>
           <div className="text-sm text-gray-600">Combo</div>
+        </div>
+
+        {/* Timer */}
+        <div className="text-center">
+          <div className="flex justify-center items-center space-x-1">
+            <Clock className="w-5 h-5 text-blue-500" />
+            <span className={`text-2xl font-bold ${gameState.timeLeft <= 5000 ? 'text-red-600' : 'text-blue-600'}`}>
+              {Math.ceil(gameState.timeLeft / 1000)}
+            </span>
+          </div>
+          <div className="text-sm text-gray-600">Time</div>
         </div>
       </div>
 

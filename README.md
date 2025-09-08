@@ -23,7 +23,6 @@ Approximately 2 hours of development
 
 ## Future Improvements
 If given more tokens, I would add:
-- A countdown so that the game is properly timed and has an ending
 - New mole types with unique effects (e.g., freeze time, double points, shuffle holes)
 - Difficulty scaling where mole speed and frequency increase gradually as levels progress
 - Sound effects and background music for more immersive gameplay
