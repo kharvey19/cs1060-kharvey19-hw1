@@ -11,7 +11,7 @@ This project is a React-based Whac-A-Mole game originally built using Bolt.new p
 
 ## Project Links
 - **GitHub Repository:** [https://github.com/kharvey19/cs1060-kharvey19-hw1](https://github.com/kharvey19/cs1060-kharvey19-hw1)
-- **Netlify Deployment:** [Your Netlify URL Here]  
+- **Netlify Deployment:** [https://wackamole-kharvey.netlify.app/](https://wackamole-kharvey.netlify.app/)  
 - **Bolt/Lovable URL:** [https://complete-whack-a-mol-ph1h.bolt.host/](https://complete-whack-a-mol-ph1h.bolt.host/)
 
 ## Issues Encountered
@@ -22,11 +22,12 @@ This project is a React-based Whac-A-Mole game originally built using Bolt.new p
 Approximately 2 hours of development
 
 ## Future Improvements
-If given more time, I would add:
+If given more tokens, I would add:
+- A countdown so that the game is properly timed and has an ending
 - New mole types with unique effects (e.g., freeze time, double points, shuffle holes)
 - Difficulty scaling where mole speed and frequency increase gradually as levels progress
 - Sound effects and background music for more immersive gameplay
 - Leaderboard system for saving high scores
 
 ------------
-Note: I had to manually fix some things in order to get this project to work on netlify and to migrate changes to github :)
+Note: Since I ran out of tokens, I had to manually fix some things in order to get this project to work on netlify and to migrate changes to github :)
