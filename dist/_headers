@@ -1,0 +1,10 @@
+*.tsx
+  Content-Type: text/javascript; charset=UTF-8
+*.ts
+  Content-Type: text/javascript; charset=UTF-8
+*.jsx
+  Content-Type: text/javascript; charset=UTF-8
+*.js
+  Content-Type: text/javascript; charset=UTF-8
+/src/*
+  Content-Type: text/javascript; charset=UTF-8

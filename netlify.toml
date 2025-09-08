@@ -1,0 +1,33 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[headers]]
+  for = "*.tsx"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+
+[[headers]]
+  for = "*.ts"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+
+[[headers]]
+  for = "*.jsx"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+
+[[headers]]
+  for = "/src/*"
+  [headers.values]
+    Content-Type = "text/javascript; charset=UTF-8"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
