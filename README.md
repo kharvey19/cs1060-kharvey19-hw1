@@ -27,3 +27,6 @@ If given more time, I would add:
 - Difficulty scaling where mole speed and frequency increase gradually as levels progress
 - Sound effects and background music for more immersive gameplay
 - Leaderboard system for saving high scores
+
+------------
+Note: I had to manually fix some things in order to get this project to work on netlify and to migrate changes to github :)
